@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首爾 6天5夜 終極美食美照之旅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+
+    <header class="bg-gradient-to-r from-teal-600 to-cyan-700 text-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center sm:text-left">
+            <span class="bg-teal-500 text-[10px] px-2.5 py-1 rounded-full font-bold tracking-wide uppercase">🇰🇷 旅遊規劃師最終定案版</span>
+            <h1 class="text-2xl font-bold mt-2 tracking-tight">首爾 6天5夜 終極美食美照之旅</h1>
+            <p class="text-teal-100 mt-1 text-xs">📅 5/29 (五) ～ 6/3 (三) · 住宿：Hop Inn Seoul Myeongdong</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-6">
+        
+        <div class="hidden md:block overflow-hidden bg-white shadow-sm border border-slate-200 rounded-xl">
+            <table class="min-w-full divide-y divide-slate-200 text-left">
+                <thead class="bg-slate-100 text-slate-700 font-bold text-sm border-b border-slate-200">
+                    <tr>
+                        <th class="px-6 py-4 w-32">日期 / 星期</th>
+                        <th class="px-6 py-4 w-28">時間</th>
+                        <th class="px-6 py-4">行程內容 / 完美動線</th>
+                        <th class="px-6 py-4">備註 / 推薦景點與美食</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" class="divide-y divide-slate-200 text-sm">
+                    </tbody>
+            </table>
+        </div>
+
+        <div id="card-container" class="block md:hidden space-y-5">
+            </div>
+
+        <section class="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-5 shadow-sm">
+            <h3 class="text-amber-800 font-bold text-sm flex items-center gap-2">
+                💡 旅遊規劃師出發前小叮嚀
+            </h3>
+            <ul class="mt-2 space-y-1.5 text-xs text-amber-700 list-disc list-inside">
+                <li><strong class="text-amber-900">必備APP：</strong>請確認下載 <strong>NAVER Map</strong>（步行導航）與 <strong>Catch Table Global版</strong>（用於倫敦貝果與山清燒肉抽號）。</li>
+                <li><strong class="text-amber-900">貝果保存：</strong>6/2 早上買好外帶回台的貝果，當晚記得先冰在 Hop Inn 飯店的小冰箱。</li>
+                <li><strong class="text-amber-900">美味還原：</strong>回台後用電鍋外鍋不加水蒸一下，或烤箱噴水回烤，即可完美還原 Q 彈口感！</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 text-[10px] text-slate-400 border-t border-slate-200 mt-8">
+        © 2026 首爾旅遊行程表 · 祝你有趟完美的韓國之旅 🛫
+    </footer>
+
+    <script>
+        // 核心大數據：包含你修改後的所有流暢動線
+        const scheduleData = [
+            {
+                day: "Day 1<br><span class='text-slate-500 font-normal'>5/29 (五)</span>",
+                dayRaw: "Day 1 - 5/29 (五)",
+                events: [
+                    { time: "14:15", content: "班機降落首爾仁川國際機場（LJ 736）", note: "辦理入境、提領行李、購買/加值交通卡（T-money）。" },
+                    { time: "15:30 - 17:00", content: "搭乘 <strong>機場巴士 6001</strong> 直達明洞/乙支路", note: "在巴士上休息補眠，車程約 1 - 1.5 小時。" },
+                    { time: "17:00 - 17:40", content: "<strong>Hop Inn 飯店</strong> Check-in、放置行李", note: "飯店位置交通極佳，稍作梳洗準備出門。" },
+                    { time: "17:40 - 18:30", content: "步行 ➔ <strong>明洞換錢所</strong> 換匯", note: "換完妥善收好，順道感受明洞傍晚的熱鬧氛圍。" },
+                    { time: "18:30 之後", content: "明洞/乙支路商圈 ➔ <strong>【新豐烤鰻魚（신풍장어）】</strong>", note: "<strong>行程優化（晚餐）</strong>：第一晚留在明洞吃炭火烤鰻魚補充滿滿活力！省去大老遠過江拉車的時間，吃完能直接逛明洞夜市，動線最流暢。" }
+                ]
+            },
+            {
+                day: "Day 2<br><span class='text-slate-500 font-normal'>5/30 (六)</span>",
+                dayRaw: "Day 2 - 5/30 (六)",
+                events: [
+                    { time: "10:00 - 11:10", content: "步行 ➔ <strong>【南山谷韓屋村】</strong>", note: "<strong>想去的地方</strong>：飯店旁，早晨清幽觀光客少，拍古風照極美。" },
+                    { time: "11:30 - 13:30", content: "步行 ➔ <strong>【山清炭火綠茶豬肉】</strong>", note: "<strong>既定行程（午餐）</strong>：<span class='text-teal-600 font-bold'>★已訂妥！</span>直接前往名店入座享用頂級烤黑豬肉。" },
+                    { time: "13:40 - 15:00", content: "搭地鐵 2 號線 ➔ <strong>【首爾林公園】</strong>", note: "<strong>行程優化</strong>：吃完烤肉剛好來首爾林散步消食🌳。漫步林蔭大道、享受鬆弛感自然大片。" },
+                    { time: "15:00 - 16:00", content: "從首爾林步行 ➔ <strong>【Perment Bakeshop 聖水店】</strong>", note: "<strong>今日甜點</strong>：就在首爾林旁！<span class='text-amber-600 font-bold'>解鎖招牌無花果奶油起司法棍🥖</span>，咬下嘎嘣脆，配拿鐵完美充電。" },
+                    { time: "16:00 - 18:30", content: "沿路逛街 ➔ <strong>【聖水洞核心商圈】</strong>", note: "<strong>想去的地方</strong>：朝聖 Dior 概念店、網美打卡建築、潮流設計師選品店大開殺戒。" },
+                    { time: "18:30 之後", content: "<strong>【聖水洞美食二選一 / 雙拼大對決】</strong>", note: "<strong>今日晚餐</strong>：<br>👉 方案一：吃清爽解膩的<strong>【水芹牛肉湯】</strong><br>👉 方案二：吃濃郁厚實的<strong>【祖傳三代馬鈴薯排骨湯】</strong><br>(肚子裝得下也可以先吃一餐，晚點吃另一餐當宵夜！)" }
+                ]
+            },
+            {
+                day: "Day 3<br><span class='text-slate-500 font-normal'>5/31 (日)</span>",
+                dayRaw: "Day 3 - 5/31 (日)",
+                events: [
+                    { time: "11:00 - 13:30", content: "搭地鐵 6 號線 ➔ <strong>【望遠市場】</strong>", note: "<strong>想去的地方</strong>：品嚐【雨耳樂】人氣第一的現炸巨無霸辣椒鑲肉🌶️" },
+                    { time: "13:30 - 15:30", content: "搭地鐵 6 號線 ➔ <strong>【Jo & Dawson Tearoom】</strong>", note: "<strong>想去的地方</strong>：朝聖神級外脆內軟、入口即化的法式吐司與現沖奶茶。" },
+                    { time: "15:30 - 18:30", content: "<strong>【延南洞文青商圈】➔【弘大商圈】</strong>", note: "<strong>今日重點</strong>：吐司店一出來就是<strong>【延南洞】</strong>！滿滿的獨立服飾品牌、小眾香氛店與文創 Object，再順路往南逛到弘大商圈看街頭表演。" },
+                    { time: "18:30 - 20:30", content: "弘大商圈 ➔ <strong>【二代祖馬鈴薯排骨湯（李太祖）】</strong>", note: "*推薦美食（晚餐）*：體驗肉骨分離的神級嫩肉配芥末醬（可與聖水洞的排骨湯在心中做對決）。" },
+                    { time: "20:30 以後", content: "繼續在弘大散步逛街或回飯店休息", note: "*踩點備案*：【保承會館-弘大店】（24小時湯飯，深夜續攤首選）。" }
+                ]
+            },
+            {
+                day: "Day 4<br><span class='text-slate-500 font-normal'>6/1 (一)</span>",
+                dayRaw: "Day 4 - 6/1 (一)",
+                events: [
+                    { time: "09:50 - 10:50", content: "飯店出發 ➔ 前往 <strong>【廣藏市場】</strong>", note: "*早鳥吃貨動線*：先衝生牛肉一條街，吃<strong>【生牛肉＋活章魚】</strong>當豪華早午餐，這個時間人潮最少，完全不用排隊！" },
+                    { time: "10:50 - 11:30", content: "廣藏市場內攤位", note: "<strong>想去的地方</strong>：衝 <strong>【Garlic Boy】</strong> 買剛出爐、香氣邪惡的<strong>爆漿乳酪香蒜麵包🧄</strong>當餐後甜點。" },
+                    { time: "11:30 - 13:00", content: "廣藏市場周邊散步或喝杯咖啡", note: "體驗在地市井氛圍，買杯冰美式（Aha）配大蒜麵包解膩最內行。" },
+                    { time: "13:00 - 17:00", content: "搭地鐵 ➔ <strong>【新沙洞林蔭大道 / 江南商圈】逛街</strong>", note: "<strong>行程優化（下午）</strong>：改逛時尚感滿滿的新沙與江南，朝聖高端品牌旗艦店與質感選品店，為晚上的聚餐鋪路。" },
+                    { time: "17:00 - 19:00", content: "新沙站 ➔ <strong>【花蟹堂（화해당）】</strong>", note: "<strong>行程異動（澎湃下午餐）</strong>：下午五點準時入座避開人潮，享用頂級鮮甜、滿滿蟹膏的招牌醬油蟹🦀！" },
+                    { time: "19:00 之後", content: "新沙站 ➔ <strong>【negi dining lounge】</strong>", note: "<strong>行程確認（晚餐聚會）</strong>：🌟與朋友相約的高質感晚餐聚會 🤝！享受新沙頂級、時髦的現代和風餐酒氛圍。" }
+                ]
+            },
+            {
+                day: "Day 5<br><span class='text-slate-500 font-normal'>6/2 (二)</span>",
+                dayRaw: "Day 5 - 6/2 (二)",
+                events: [
+                    { time: "07:30 - 09:15", content: "飯店出發 ➔ 搭地鐵 3 號線 ➔ <strong>【安國站】</strong>", note: "<strong>想去的地方</strong>：<strong>【倫敦貝果博物館 安國店】內用吃網美早餐＋順便外帶打包回台的貝果</strong>（外帶To-go排隊較快）。" },
+                    { time: "09:30 - 12:30", content: "搭地鐵 3 號線 ➔ <strong>【景福宮】</strong>", note: "<strong>想去的地方</strong>：早上租韓服，在古老宮殿與庭園內拍出古典網美大片（著韓服免費入場）。" },
+                    { time: "12:30 - 12:45", content: "依依不捨還韓服 ➔ 散步出發前往餐廳", note
